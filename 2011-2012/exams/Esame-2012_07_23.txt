@@ -1,0 +1,76 @@
+* Esercizio 1 *
+
+* * Punto 1 * *
+P(E) = P(A union B union C) = P(A) + P(B) + P(C) - P(A intersection B) - P(A intersection C) - P(B intersection C) + P(A intersection B intersection B) = 0.3 + 0.4 + 0.7 - (0.3 * 0.4) - (0.3 * 0.7) - (0.4 * 0.7) + (0.3 * 0.4 * 0.7) = 0.874;
+
+* * Punto 2 * *
+P(E_1) = P(A) * (1 - P(B)) * (1 - P(C)) + P(B) * (1 - P(A)) * (1 - P(C)) + P(C) * (1 - P(A)) * (1 - P(B)) = 0.3 * 0.6 * 0.3 + 0.4 * 0.7 * 0.3 + 0.7 * 0.7 * 0.6 = 0.432;
+
+* Esercizio 2 *
+
+* * Punto 1 * *
+P(E_ac) = {1 * 1 * fact (z - 2) * (z - 1) over fact z };
+
+* * Punto 2 * *
+P(E_abc) = {1 * 1 * 1 * fact{(z - 3)} * (z - 2)} over { fact{z} };
+
+
+* Esercizio 3 *
+
+* * Punto 1 * *
+P(A union B) = 1 over 4 = P(A) + P(B) - P(A intersection B) = P(A) + P(B) - P(A) * P(B) = 1 over 5 + P(B) - {P(B)} over 5; newline
+P(B) - {P(B)} over 5 = 1 over 4 - 1 over 5; newline
+5 * P(B) - P(B) = 5 over 4 - 5 over 5; newline
+4 * P(B) = 1 over 4; newline
+P(B) = 1 over 16;
+
+* * Punto 2 * *
+P(A divides B) = 1 over 7 = {P(A intersection B)} over {P(B)} = {-P(A union B) + P(A) + P(B)} over {P(B)} = {-{1 over 4} + 1 over 5 + P(B)} over {P(B)}; newline
+{P(B)} over 7 = -{1 over 4} + 1 over 5 + P(B);  newline
+P(B) = -{7 over 4} + 7 over 5 + 7*P(B); newline
+6 * P(B) = 7 over 4 - {7 over 5}; newline
+P(B) = 7 over 24 - {7 over 30} = 7 over 120;
+
+* Esercizio 4 *
+
+* * Punto 1 * *
+P(X = 0) = left (1 over 4 right)^0 * left (3 over 4 right)^4 * left (binom 4 {0, 4} right); newline
+P(X = 1) = left (1 over 4 right)^1 * left (3 over 4 right)^3 * left (binom 4 {1, 3} right); newline
+P(X = 2) = left (1 over 4 right)^2 * left (3 over 4 right)^2 * left (binom 4 {2, 2} right); newline
+P(X = 3) = left (1 over 4 right)^3 * left (3 over 4 right)^1 * left (binom 4 {3, 1} right); newline
+P(X = 4) = left (1 over 4 right)^4 * left (3 over 4 right)^0 * left (binom 4 {4, 0} right);
+
+* * Punto 2 * *
+E[X] = 0 * p(0) + 1 * p(1) + 2 * p(2) + 3 * p(3) + 4 * p(4); newline
+E[X^2] = 0^2 * p(0) + 1^2 * p(1) + 2^2 * p(2) + 3^2 * p(3) + 4^2 * p(4); newline
+Var(X) = E[X^2] - E[X]^2;
+
+* Esercizio 5 *
+
+* * Punto 1 * *
+p + 2p = 1; newline
+p = 1 over 3;
+
+P(X = 1) = 1 over 3; newline
+P(X = 2) = p(1) * (1 - p(1)); newline
+P(X = 3) = p(1) * (1 - p(1))^2; newline
+P(X = k) = p(1) * (1 - p(1))^(k-1);
+
+* * Punto 2 * *
+E[X] = 1 over {p(1)}; newline
+Var(X) = {1 - p(1)} over {p(1)^2};
+
+Il primo.
+
+* Esercizio 6 *
+
+* * Punto 1 * *
+P(0) = {left (binom 4 0 right ) * left ( binom 48 3 right )} over {fact 52}; newline
+P(1) = {left (binom 4 1 right ) * left ( binom 48 2 right )} over {fact 52}; newline
+P(2) = {left (binom 4 2 right ) * left ( binom 48 1 right )} over {fact 52}; newline
+P(3) = {left (binom 4 3 right ) * left ( binom 48 0 right )} over {fact 52};
+
+* * Punto 2 * *
+E[X] = 0 * p(0) + 1 * p(1) + 2 * p(2) + 3 * p(3); newline
+E[X^2] = 0^2 * p(0) + 1^2 * p(1) + 2^2 * p(2) + 3^2 * p(3); newline
+Var(X) = E[X^2] - E[X]^2;
