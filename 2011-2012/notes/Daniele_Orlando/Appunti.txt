@@ -1,0 +1,103 @@
+* Permutazioni
+        Vi sono
+        n!
+        modi di disporre n elementi distinti.
+
+        Vi sono
+        n! / ( r1! * ... * rk! )
+        modi di disporre n elementi, di cui ri elementi non distinti, dove
+        r1 + ... + rk = sum[i=0 k] ( ri )
+
+
+* Dismutazioni
+        Sono le permutazioni non aventi elementi uguali nello stesso posto, e sono nel numero di
+        !N = N! * Sum[i=0 N]( (-1)^i / i! )
+
+
+* Combinazioni
+        Vi sono
+        ( n : r ) =  n! / (n - r)! * r!
+        modi di disporre n elementi in un gruppo di r elementi.
+
+
+* Suddivisioni
+        Vi sono
+        ( n : r1,...,rk ) = n! / ( r1! * ... * rk! )
+        modi di suddividere n elementi distinti in k gruppi distinti di ri elementi ciascuno, dove
+        r1 + ... + rk = n
+
+
+* Soluzioni Intere di un'Equazione
+        Vi sono
+        r^n
+        modi di distribuire n elementi distinti in r gruppi distinti.
+
+        Vi sono
+        ( n - 1 : r - 1 )
+        modi di distribuire n elementi non distinti in r gruppi distinti non vuoti.
+
+        Vi sono
+        ( n + r - 1 : r - 1 )
+        modi di distribuire n elementi non distinti in r gruppi distinti anche vuoti.
+
+
+* Leggi di De Morgan
+        ∪[i=1 n]( Ei )^C = ∩[i=1 n]( Ei^C )
+        ∩[i=1 n]( Ei )^C = ∪[i=1 n]( Ei^C )
+
+
+* Eventi Necessari
+        Due eventi E ed F sono necessari se E ∪ F = Ω (l'evento certo).
+
+
+* Eventi Disgiunti
+        Due eventi E ed F sono disgiunti se E ∩ F = ø.
+
+
+* Eventi Incompatibili
+        Due eventi E ed F sono incompatibili se P(E ∪ F) = P(E) + P(F).
+
+
+* Eventi Indipendenti
+        Due eventi E ed F sono indipendenti se P(E ∩ F) = P(E) * P(F).
+
+
+* Proprietà Base
+        1 = P(S) = P(E ∪ Ec) = P(E) + P(Ec)
+
+        P(E ∪ F) = P(E) + P(F) - P(E ∩ F)
+        P(A ∪ B ∪ C) = P(A) + P(B) + P(C) - P(A ∩ B) - P(A ∩ C) - P(B ∩ C) + P(A ∩ B ∩ C)
+
+        P(E ∩ Fc) = P(E) - P(E ∩ F)
+        P(E ∩ F) = P(E) - P(E ∩ Fc)
+
+        Se E ⊂ F, allora P(E) < P(F).
+        P(F) = P(E) + P(Ec ∩ F)
+
+        P(E | F) = P(E ∩ F) / P(F)
+        P(E ∩ F) = P(E | F) * P(F)
+
+
+* Teorema di Bayes
+        P(E) = P(E ∩ F) + P(E ∩ Fc)
+        P(E) = { P(E | F) * P(F) } + { P(E | Fc) * P(Fc) }
+        P(E | F) = { P(F | E) * P(E) } / P(F) = { P(F | E) * P(E) } / { P(F | E) * P(E) + P(F | Ec) * P(Ec) }
+
+
+* Variabili Aleatorie Discrete
+        Una variabili aleatoria che possa assumere un'infinità al più numerabile di valori è detta discreta.
+        Per una variabile aleatoria discreta X, definiamo la densità discreta p(x) come
+        p(x) = P(X = x)
+
+
+* Valore Atteso (o Media Pesata)
+        E[X] = x * p(x)
+        E[X^2] = x^2 * p(x)
+        Varianza
+        Con µ = E[X],Var(X) = E[(X - µ)^2] = E[X^2] - µ^2
+
+
+* Variabile Aleatoria Geometrica
+        P(X = k) = p * (1 - p)^(k - 1)
+        E[X] = 1/p
+        Var(X) = (1 - p) / p^2
